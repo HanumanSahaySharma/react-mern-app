@@ -1,0 +1,15 @@
+.alert {
+   position: fixed;
+   right: 0;
+   z-index: 1111;
+   top: 10px;
+   margin: 0;
+   width: 100%;
+   max-width: 480px;
+   &.alert-warning {
+      border: 1px solid lighten($default-warning, 15%);
+   }
+   &.alert-shadow {
+      box-shadow: 0 2px 25px 0 hsla(0, 0%, 72.2%, .25);
+   }
+}

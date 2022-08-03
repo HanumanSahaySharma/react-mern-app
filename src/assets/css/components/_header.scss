@@ -1,0 +1,41 @@
+.navbar {
+   width: 100%;
+   padding: 0;
+   transition: all 0.3s;
+   background-color: $default-dark !important;
+   li {
+      .nav-link {
+         opacity: 0.8;
+         display: block;
+         overflow: hidden;
+         font-weight: 600;
+         position: relative;
+         text-decoration: none;
+         color: $default-white;
+         text-transform: uppercase;
+         padding: 12px 0 !important;
+         &:hover,
+         &.active {
+            color: $default-white;
+            opacity: 1;
+            &::before {
+               transform: translateY(0);
+               opacity: 1;
+            }
+         }
+         &::before {
+            opacity: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 5px;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            transition: all 0.3s;
+            transform: translateY(5px);
+            background-color: $default-danger;
+         }
+      }
+   }
+}
